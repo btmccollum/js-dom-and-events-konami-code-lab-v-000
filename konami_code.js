@@ -4,6 +4,7 @@ let i = 0;
 function init() {
   const main = document.body;
   main.addEventListener('keydown', function(e) {
+    e.stopPropagation();
     const key = parseInt(e.detail || e.which);
     // console.log(key);
     if (key === code[i]) {
